@@ -31,7 +31,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/cspsa-server:system/bin/cspsa-server \
     $(LOCAL_PATH)/proprietary/bin/geomagneticd6x:system/bin/geomagneticd6x \
     $(LOCAL_PATH)/proprietary/bin/gps.cer:system/bin/gps.cer \
-    $(LOCAL_PATH)/proprietary/bin/gpsd:system/bin/gpsd \
     $(LOCAL_PATH)/proprietary/bin/immvibed:system/bin/immvibed \
     $(LOCAL_PATH)/proprietary/bin/modem_log_relay:system/bin/modem_log_relay \
     $(LOCAL_PATH)/proprietary/bin/modem-supervisor:system/bin/modem-supervisor \
@@ -41,8 +40,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/rild:system/bin/rild \
     $(LOCAL_PATH)/proprietary/bin/stedump:system/bin/stedump \
     $(LOCAL_PATH)/proprietary/bin/ta_loader:system/bin/ta_loader \
-    $(LOCAL_PATH)/proprietary/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \
-    $(LOCAL_PATH)/proprietary/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \
     $(LOCAL_PATH)/proprietary/etc/AGPS_CA.pem:system/etc/AGPS_CA.pem \
     $(LOCAL_PATH)/proprietary/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
     $(LOCAL_PATH)/proprietary/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
@@ -130,13 +127,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     $(LOCAL_PATH)/proprietary/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
     $(LOCAL_PATH)/proprietary/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/audio_policy.montblanc.so:system/lib/hw/audio_policy.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/copybit.montblanc.so:system/lib/hw/copybit.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/gps.montblanc.so:system/lib/hw/gps.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/gralloc.montblanc.so:system/lib/hw/gralloc.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/hwcomposer.montblanc.so:system/lib/hw/hwcomposer.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
+    $(LOCAL_PATH)/proprietary/lib/libasound.so:system/lib/libasound.so \
+    $(LOCAL_PATH)/proprietary/lib/libaudiopolicy_sec.so:system/lib/libaudiopolicy_sec.so \
     $(LOCAL_PATH)/proprietary/lib/libatparser.so:system/lib/libatparser.so \
     $(LOCAL_PATH)/proprietary/lib/libbassapp.so:system/lib/libbassapp.so \
     $(LOCAL_PATH)/proprietary/lib/libblt_hw.so:system/lib/libblt_hw.so \
@@ -176,8 +177,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
     $(LOCAL_PATH)/proprietary/lib/libshmnetlnk.so:system/lib/libshmnetlnk.so \
     $(LOCAL_PATH)/proprietary/lib/libsms_server.so:system/lib/libsms_server.so \
-    $(LOCAL_PATH)/proprietary/lib/libspeech_proc_customer_plugin.so:system/lib/libspeech_proc_customer_plugin.so \
     $(LOCAL_PATH)/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
+    $(LOCAL_PATH)/proprietary/lib/libspeech_proc_customer_plugin.so:system/lib/libspeech_proc_customer_plugin.so \
     $(LOCAL_PATH)/proprietary/lib/libste_adm.so:system/lib/libste_adm.so \
     $(LOCAL_PATH)/proprietary/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
     $(LOCAL_PATH)/proprietary/lib/libstecom.so:system/lib/libstecom.so \
@@ -193,7 +194,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libstlport.so:system/lib/libstlport.so \
     $(LOCAL_PATH)/proprietary/lib/libtee.so:system/lib/libtee.so \
     $(LOCAL_PATH)/proprietary/lib/libtrace.so:system/lib/libtrace.so \
-    $(LOCAL_PATH)/proprietary/lib/libui.so:system/lib/libui.so \
     $(LOCAL_PATH)/proprietary/lib/libUMP.so:system/lib/libUMP.so \
     $(LOCAL_PATH)/proprietary/lib/libwvdrm_L3.so:system/lib/libwvdrm_L3.so \
     $(LOCAL_PATH)/proprietary/lib/libwvm.so:system/lib/libwvm.so \
@@ -277,10 +277,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_hendrix.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_hendrix.dat \
     $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_kyle.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_kyle.dat \
     $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/sony_isx006.dat:system/usr/share/camera/config_file/sony_isx006.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/sony_isx012.dat:system/usr/share/camera/config_file/sony_isx012.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/sony_isx012_hendrix.dat:system/usr/share/camera/config_file/sony_isx012_hendrix.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/sony_isx012_skomer.dat:system/usr/share/camera/config_file/sony_isx012_skomer.dat \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrcommon.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrcommon.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec24.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec24.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec.elf4nmf \
