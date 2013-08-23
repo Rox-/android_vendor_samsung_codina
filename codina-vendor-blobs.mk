@@ -31,6 +31,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/cspsa-server:system/bin/cspsa-server \
     $(LOCAL_PATH)/proprietary/bin/geomagneticd6x:system/bin/geomagneticd6x \
     $(LOCAL_PATH)/proprietary/bin/gps.cer:system/bin/gps.cer \
+    $(LOCAL_PATH)/proprietary/bin/gpsd:system/bin/gpsd \
     $(LOCAL_PATH)/proprietary/bin/immvibed:system/bin/immvibed \
     $(LOCAL_PATH)/proprietary/bin/modem_log_relay:system/bin/modem_log_relay \
     $(LOCAL_PATH)/proprietary/bin/modem-supervisor:system/bin/modem-supervisor \
