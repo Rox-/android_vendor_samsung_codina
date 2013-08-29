@@ -128,8 +128,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
     $(LOCAL_PATH)/proprietary/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     $(LOCAL_PATH)/proprietary/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/audio_policy.montblanc.so:system/lib/hw/audio_policy.montblanc.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/copybit.montblanc.so:system/lib/hw/copybit.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
@@ -137,11 +137,54 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/gralloc.montblanc.so:system/lib/hw/gralloc.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/hwcomposer.montblanc.so:system/lib/hw/hwcomposer.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
     $(LOCAL_PATH)/proprietary/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
     $(LOCAL_PATH)/proprietary/lib/libasound.so:system/lib/libasound.so \
     $(LOCAL_PATH)/proprietary/lib/libaudiopolicy_sec.so:system/lib/libaudiopolicy_sec.so \
+    $(LOCAL_PATH)/proprietary/lib/libbt-aptx-4.0.3.so:system/lib/libbt-aptx-4.0.3.so \
+    $(LOCAL_PATH)/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
+    $(LOCAL_PATH)/proprietary/lib/libSamsungPDLComposer_MD.so:system/lib/libSamsungPDLComposer_MD.so \
+    $(LOCAL_PATH)/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
+    $(LOCAL_PATH)/proprietary/lib/libsamsungtts.so:system/lib/libsamsungtts.so \
+    $(LOCAL_PATH)/proprietary/lib/libspeech_processing.so:system/lib/libspeech_processing.so \
+    $(LOCAL_PATH)/proprietary/lib/libSR_AudioIn.so:system/lib/libSR_AudioIn.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_adm.so:system/lib/libste_adm.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_dec_amr.so:system/lib/libste_dec_amr.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_dec_amrwb.so:system/lib/libste_dec_amrwb.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_dec_h264.so:system/lib/libste_dec_h264.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_dec_jpeg.so:system/lib/libste_dec_jpeg.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_dec_mpeg2.so:system/lib/libste_dec_mpeg2.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_dec_mpeg4.so:system/lib/libste_dec_mpeg4.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_dec_vc1.so:system/lib/libste_dec_vc1.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_drc.so:system/lib/libste_drc.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_enc_aac.so:system/lib/libste_enc_aac.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_enc_amr.so:system/lib/libste_enc_amr.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_enc_amrwb.so:system/lib/libste_enc_amrwb.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_enc_h264.so:system/lib/libste_enc_h264.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_enc_jpeg.so:system/lib/libste_enc_jpeg.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_enc_mpeg4.so:system/lib/libste_enc_mpeg4.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ensloader.so:system/lib/libste_ensloader.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_exif_mixer.so:system/lib/libste_exif_mixer.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ext_camera.so:system/lib/libste_ext_camera.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_noise_reduction.so:system/lib/libste_noise_reduction.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_pcm_splitter.so:system/lib/libste_pcm_splitter.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_speech_proc.so:system/lib/libste_speech_proc.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_spl.so:system/lib/libste_spl.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_teq.so:system/lib/libste_teq.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_tonegen.so:system/lib/libste_tonegen.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_val_src_sink.so:system/lib/libste_val_src_sink.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_virtual_surround.so:system/lib/libste_virtual_surround.so \
     $(LOCAL_PATH)/proprietary/lib/libatparser.so:system/lib/libatparser.so \
+    $(LOCAL_PATH)/proprietary/lib/libaudiopolicy_sec.so:system/lib/libaudiopolicy_sec.so \
     $(LOCAL_PATH)/proprietary/lib/libbassapp.so:system/lib/libbassapp.so \
     $(LOCAL_PATH)/proprietary/lib/libblt_hw.so:system/lib/libblt_hw.so \
     $(LOCAL_PATH)/proprietary/lib/libcn.so:system/lib/libcn.so \
@@ -180,11 +223,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
     $(LOCAL_PATH)/proprietary/lib/libshmnetlnk.so:system/lib/libshmnetlnk.so \
     $(LOCAL_PATH)/proprietary/lib/libsms_server.so:system/lib/libsms_server.so \
-    $(LOCAL_PATH)/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
     $(LOCAL_PATH)/proprietary/lib/libspeech_proc_customer_plugin.so:system/lib/libspeech_proc_customer_plugin.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_adm.so:system/lib/libste_adm.so \
     $(LOCAL_PATH)/proprietary/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
     $(LOCAL_PATH)/proprietary/lib/libstecom.so:system/lib/libstecom.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
