@@ -16,22 +16,110 @@
 
 LOCAL_PATH := $(LOCAL_PATH)
 
-# Prebuilt libraries that are needed to build open-source libraries
-PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/proprietary/lib/libril.so:obj/lib/libril.so \
-    $(LOCAL_PATH)/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so
+# Camera
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
+    $(LOCAL_PATH)/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/aptina_mt9v113.dat:system/usr/share/camera/config_file/aptina_mt9v113.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/dongbu_db8131m.dat:system/usr/share/camera/config_file/dongbu_db8131m.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/omnivision_ov5640_pri_30fps.dat:system/usr/share/camera/config_file/omnivision_ov5640_pri_30fps.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/omnivision_ov5640_pri.dat:system/usr/share/camera/config_file/omnivision_ov5640_pri.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/omnivision_ov5640_sec.dat:system/usr/share/camera/config_file/omnivision_ov5640_sec.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_golden.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_golden.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_janice.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_janice.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_kyle.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_kyle.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_rev00.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_rev00.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_ricco.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_ricco.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k6aafx13.dat:system/usr/share/camera/config_file/samsung_s5k6aafx13.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k6aafx13_rev00.dat:system/usr/share/camera/config_file/samsung_s5k6aafx13_rev00.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_hendrix.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_hendrix.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_kyle.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_kyle.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat \
 
+# Mali-400
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
+    $(LOCAL_PATH)/proprietary/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
+    $(LOCAL_PATH)/proprietary/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
+    $(LOCAL_PATH)/proprietary/lib/libMali.so:system/lib/libMali.so \
+    $(LOCAL_PATH)/proprietary/lib/libUMP.so:system/lib/libUMP.so \
+
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/hw/audio_policy.montblanc.so:system/lib/hw/audio_policy.montblanc.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so \
+    $(LOCAL_PATH)/proprietary/lib/libaudiopolicy_sec.so:system/lib/libaudiopolicy_sec.so \
+    $(LOCAL_PATH)/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
+    $(LOCAL_PATH)/proprietary/lib/lib_SamsungRec_V01006.so:system/lib/lib_SamsungRec_V01006.so \
+    $(LOCAL_PATH)/proprietary/lib/lib_Samsung_SB_AM_for_ICS_v03008.so:system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so \
+    $(LOCAL_PATH)/proprietary/lib/libhalaudioprocessing.so:system/lib/libhalaudioprocessing.so \
+    $(LOCAL_PATH)/proprietary/lib/libsamsungRecord.so:system/lib/libsamsungRecord.so \
+    $(LOCAL_PATH)/proprietary/lib/libasound.so:system/lib/libasound.so \
+    $(LOCAL_PATH)/proprietary/lib/libsamsungtts.so:system/lib/libsamsungtts.so \
+    $(LOCAL_PATH)/proprietary/lib/libSR_AudioIn.so:system/lib/libSR_AudioIn.so \
+
+# RIL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/libril.so:system/lib/libril.so \
+    $(LOCAL_PATH)/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \
+    $(LOCAL_PATH)/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
+
+# Bluetooth
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/bin/bcm4330.hcd:system/bin/bcm4330.hcd \
+
+# Wifi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_apsta.bin:system/etc/wifi/bcmdhd_apsta.bin \
+    $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_mfg.bin:system/etc/wifi/bcmdhd_mfg.bin \
+    $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_p2p.bin:system/etc/wifi/bcmdhd_p2p.bin \
+    $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_sta.bin:system/etc/wifi/bcmdhd_sta.bin \
+    $(LOCAL_PATH)/proprietary/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
+    $(LOCAL_PATH)/proprietary/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
+
+# Display
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/hw/gralloc.montblanc.so:system/lib/hw/gralloc.montblanc.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/hwcomposer.montblanc.so:system/lib/hw/hwcomposer.montblanc.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/copybit.montblanc.so:system/lib/hw/copybit.montblanc.so \
+
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/bin/gps.cer:system/bin/gps.cer \
+    $(LOCAL_PATH)/proprietary/bin/gpsd:system/bin/gpsd \
+    $(LOCAL_PATH)/proprietary/etc/AGPS_CA.pem:system/etc/AGPS_CA.pem \
+    $(LOCAL_PATH)/proprietary/etc/gps.xml:system/etc/gps.xml \
+    $(LOCAL_PATH)/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/gps.montblanc.so:system/lib/hw/gps.montblanc.so \
+
+# Lights/sensors modules
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
+    $(LOCAL_PATH)/proprietary/etc/sensors.dat:system/etc/sensors.dat \
+    $(LOCAL_PATH)/proprietary/etc/calib.dat:system/etc/calib.dat \
+    $(LOCAL_PATH)/proprietary/etc/param.dat:system/etc/param.dat \
+
+# Security Daemon Modem
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/tee/cops_ta.ssw:system/lib/tee/cops_ta.ssw \
+    $(LOCAL_PATH)/proprietary/lib/tee/custom_ta.ssw:system/lib/tee/custom_ta.ssw \
+    $(LOCAL_PATH)/proprietary/lib/tee/libbassapp_ssw:system/lib/tee/libbassapp_ssw \
+    $(LOCAL_PATH)/proprietary/lib/tee/smcl_ta_8500bx_secure.ssw:system/lib/tee/smcl_ta_8500bx_secure.ssw \
+    $(LOCAL_PATH)/proprietary/lib/libcops.so:system/lib/libcops.so \
+
+# System STE binaries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/admsrv:system/bin/admsrv \
     $(LOCAL_PATH)/proprietary/bin/at_core:system/bin/at_core \
     $(LOCAL_PATH)/proprietary/bin/at_distributor:system/bin/at_distributor \
-    $(LOCAL_PATH)/proprietary/bin/bcm4330.hcd:system/bin/bcm4330.hcd \
     $(LOCAL_PATH)/proprietary/bin/btld:system/bin/btld \
     $(LOCAL_PATH)/proprietary/bin/copsdaemon:system/bin/copsdaemon \
     $(LOCAL_PATH)/proprietary/bin/cspsa-server:system/bin/cspsa-server \
     $(LOCAL_PATH)/proprietary/bin/geomagneticd6x:system/bin/geomagneticd6x \
-    $(LOCAL_PATH)/proprietary/bin/gps.cer:system/bin/gps.cer \
-    $(LOCAL_PATH)/proprietary/bin/gpsd:system/bin/gpsd \
     $(LOCAL_PATH)/proprietary/bin/immvibed:system/bin/immvibed \
     $(LOCAL_PATH)/proprietary/bin/modem_log_relay:system/bin/modem_log_relay \
     $(LOCAL_PATH)/proprietary/bin/modem-supervisor:system/bin/modem-supervisor \
@@ -41,162 +129,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/rild:system/bin/rild \
     $(LOCAL_PATH)/proprietary/bin/stedump:system/bin/stedump \
     $(LOCAL_PATH)/proprietary/bin/ta_loader:system/bin/ta_loader \
-    $(LOCAL_PATH)/proprietary/etc/AGPS_CA.pem:system/etc/AGPS_CA.pem \
-    $(LOCAL_PATH)/proprietary/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
-    $(LOCAL_PATH)/proprietary/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
-    $(LOCAL_PATH)/proprietary/etc/AT/system_id.cfg:system/etc/AT/system_id.cfg \
-    $(LOCAL_PATH)/proprietary/etc/calib.dat:system/etc/calib.dat \
-    $(LOCAL_PATH)/proprietary/etc/gps.xml:system/etc/gps.xml \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/LVVEFS_Rx_Configuration.txt:system/etc/LVVEFS_tuning_parameters/LVVEFS_Rx_Configuration.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/LVVEFS_Tx_Configuration.txt:system/etc/LVVEFS_tuning_parameters/LVVEFS_Tx_Configuration.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_LOOPBACK.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_LOOPBACK.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_EXTRA.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_EXTRA.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_EXTRA_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_EXTRA_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_LOOPBACK.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_LOOPBACK.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_EXTRA.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_EXTRA.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_EXTRA_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_EXTRA_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt \
-    $(LOCAL_PATH)/proprietary/etc/param.dat:system/etc/param.dat \
-    $(LOCAL_PATH)/proprietary/etc/psdata/stepscc_conf:system/etc/psdata/stepscc_conf \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_conf:system/etc/psdata/sterc_conf \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_conf_alt:system/etc/psdata/sterc_conf_alt \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect:system/etc/psdata/sterc_script_connect \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect_alt:system/etc/psdata/sterc_script_connect_alt \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect_dun:system/etc/psdata/sterc_script_connect_dun \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_disconnect:system/etc/psdata/sterc_script_disconnect \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_disconnect_dun:system/etc/psdata/sterc_script_disconnect_dun \
-    $(LOCAL_PATH)/proprietary/etc/sensors.dat:system/etc/sensors.dat \
-    $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_apsta.bin:system/etc/wifi/bcmdhd_apsta.bin \
-    $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_mfg.bin:system/etc/wifi/bcmdhd_mfg.bin \
-    $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_p2p.bin:system/etc/wifi/bcmdhd_p2p.bin \
-    $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_sta.bin:system/etc/wifi/bcmdhd_sta.bin \
-    $(LOCAL_PATH)/proprietary/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
-    $(LOCAL_PATH)/proprietary/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
-    $(LOCAL_PATH)/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
-    $(LOCAL_PATH)/proprietary/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
-    $(LOCAL_PATH)/proprietary/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
-    $(LOCAL_PATH)/proprietary/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/audio_policy.montblanc.so:system/lib/hw/audio_policy.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/copybit.montblanc.so:system/lib/hw/copybit.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/gps.montblanc.so:system/lib/hw/gps.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/gralloc.montblanc.so:system/lib/hw/gralloc.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/hwcomposer.montblanc.so:system/lib/hw/hwcomposer.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
-    $(LOCAL_PATH)/proprietary/lib/libasound.so:system/lib/libasound.so \
-    $(LOCAL_PATH)/proprietary/lib/libaudiopolicy_sec.so:system/lib/libaudiopolicy_sec.so \
-    $(LOCAL_PATH)/proprietary/lib/libbt-aptx-4.0.3.so:system/lib/libbt-aptx-4.0.3.so \
-    $(LOCAL_PATH)/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
-    $(LOCAL_PATH)/proprietary/lib/libSamsungPDLComposer_MD.so:system/lib/libSamsungPDLComposer_MD.so \
-    $(LOCAL_PATH)/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
-    $(LOCAL_PATH)/proprietary/lib/libsamsungtts.so:system/lib/libsamsungtts.so \
-    $(LOCAL_PATH)/proprietary/lib/libspeech_processing.so:system/lib/libspeech_processing.so \
-    $(LOCAL_PATH)/proprietary/lib/libSR_AudioIn.so:system/lib/libSR_AudioIn.so \
-    $(LOCAL_PATH)/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_adm.so:system/lib/libste_adm.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_dec_amr.so:system/lib/libste_dec_amr.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_dec_amrwb.so:system/lib/libste_dec_amrwb.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_dec_h264.so:system/lib/libste_dec_h264.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_dec_jpeg.so:system/lib/libste_dec_jpeg.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_dec_mpeg2.so:system/lib/libste_dec_mpeg2.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_dec_mpeg4.so:system/lib/libste_dec_mpeg4.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_dec_vc1.so:system/lib/libste_dec_vc1.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_drc.so:system/lib/libste_drc.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_enc_aac.so:system/lib/libste_enc_aac.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_enc_amr.so:system/lib/libste_enc_amr.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_enc_amrwb.so:system/lib/libste_enc_amrwb.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_enc_h264.so:system/lib/libste_enc_h264.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_enc_jpeg.so:system/lib/libste_enc_jpeg.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_enc_mpeg4.so:system/lib/libste_enc_mpeg4.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ensloader.so:system/lib/libste_ensloader.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_exif_mixer.so:system/lib/libste_exif_mixer.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ext_camera.so:system/lib/libste_ext_camera.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_noise_reduction.so:system/lib/libste_noise_reduction.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_pcm_splitter.so:system/lib/libste_pcm_splitter.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_speech_proc.so:system/lib/libste_speech_proc.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_spl.so:system/lib/libste_spl.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_teq.so:system/lib/libste_teq.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_tonegen.so:system/lib/libste_tonegen.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_val_src_sink.so:system/lib/libste_val_src_sink.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_virtual_surround.so:system/lib/libste_virtual_surround.so \
+
+# System STE Libs
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libatparser.so:system/lib/libatparser.so \
-    $(LOCAL_PATH)/proprietary/lib/libaudiopolicy_sec.so:system/lib/libaudiopolicy_sec.so \
     $(LOCAL_PATH)/proprietary/lib/libbassapp.so:system/lib/libbassapp.so \
     $(LOCAL_PATH)/proprietary/lib/libblt_hw.so:system/lib/libblt_hw.so \
     $(LOCAL_PATH)/proprietary/lib/libcn.so:system/lib/libcn.so \
     $(LOCAL_PATH)/proprietary/lib/libcontrolcsc.so:system/lib/libcontrolcsc.so \
-    $(LOCAL_PATH)/proprietary/lib/libcops.so:system/lib/libcops.so \
     $(LOCAL_PATH)/proprietary/lib/libcspsa.so:system/lib/libcspsa.so \
-    $(LOCAL_PATH)/proprietary/lib/libexpat.so:system/lib/libexpat.so \
     $(LOCAL_PATH)/proprietary/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
-    $(LOCAL_PATH)/proprietary/lib/libFFTEm.so:system/lib/libFFTEm.so \
-    $(LOCAL_PATH)/proprietary/lib/libhalaudioprocessing.so:system/lib/libhalaudioprocessing.so \
     $(LOCAL_PATH)/proprietary/lib/libisimessage.so:system/lib/libisimessage.so \
     $(LOCAL_PATH)/proprietary/lib/liblos.so:system/lib/liblos.so \
-    $(LOCAL_PATH)/proprietary/lib/libMali.so:system/lib/libMali.so \
     $(LOCAL_PATH)/proprietary/lib/libmalmon.so:system/lib/libmalmon.so \
     $(LOCAL_PATH)/proprietary/lib/libmalrf.so:system/lib/libmalrf.so \
     $(LOCAL_PATH)/proprietary/lib/libmalutil.so:system/lib/libmalutil.so \
@@ -204,46 +148,27 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libmpl.so:system/lib/libmpl.so \
     $(LOCAL_PATH)/proprietary/lib/libnmfee.so:system/lib/libnmfee.so \
     $(LOCAL_PATH)/proprietary/lib/libnmf.so:system/lib/libnmf.so \
-    $(LOCAL_PATH)/proprietary/lib/libnmftimer.so:system/lib/libnmftimer.so \
     $(LOCAL_PATH)/proprietary/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
-    $(LOCAL_PATH)/proprietary/lib/libomxil-bellagio.so:system/lib/libomxil-bellagio.so \
     $(LOCAL_PATH)/proprietary/lib/libphonet.so:system/lib/libphonet.so \
-    $(LOCAL_PATH)/proprietary/lib/libpower.so:system/lib/libpower.so \
     $(LOCAL_PATH)/proprietary/lib/libpscc.so:system/lib/libpscc.so \
-    $(LOCAL_PATH)/proprietary/lib/libril.so:system/lib/libril.so \
-    $(LOCAL_PATH)/proprietary/lib/libsamsungRecord.so:system/lib/libsamsungRecord.so \
-    $(LOCAL_PATH)/proprietary/lib/lib_SamsungRec_V01006.so:system/lib/lib_SamsungRec_V01006.so \
-    $(LOCAL_PATH)/proprietary/lib/lib_Samsung_SB_AM_for_ICS_v03008.so:system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so \
-    $(LOCAL_PATH)/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
-    $(LOCAL_PATH)/proprietary/lib/libsavsac.so:system/lib/libsavsac.so \
-    $(LOCAL_PATH)/proprietary/lib/libsavscmn.so:system/lib/libsavscmn.so \
     $(LOCAL_PATH)/proprietary/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
-    $(LOCAL_PATH)/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \
-    $(LOCAL_PATH)/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
     $(LOCAL_PATH)/proprietary/lib/libshmnetlnk.so:system/lib/libshmnetlnk.so \
     $(LOCAL_PATH)/proprietary/lib/libsms_server.so:system/lib/libsms_server.so \
     $(LOCAL_PATH)/proprietary/lib/libspeech_proc_customer_plugin.so:system/lib/libspeech_proc_customer_plugin.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
     $(LOCAL_PATH)/proprietary/lib/libstecom.so:system/lib/libstecom.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ensloader.so:system/lib/libste_ensloader.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
     $(LOCAL_PATH)/proprietary/lib/libstelpcutils.so:system/lib/libstelpcutils.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
-    $(LOCAL_PATH)/proprietary/lib/libsterc.so:system/lib/libsterc.so \
-    $(LOCAL_PATH)/proprietary/lib/libstlport.so:system/lib/libstlport.so \
+   $(LOCAL_PATH)/proprietary/lib/libsterc.so:system/lib/libsterc.so \
     $(LOCAL_PATH)/proprietary/lib/libtee.so:system/lib/libtee.so \
     $(LOCAL_PATH)/proprietary/lib/libtrace.so:system/lib/libtrace.so \
-    $(LOCAL_PATH)/proprietary/lib/libUMP.so:system/lib/libUMP.so \
-    $(LOCAL_PATH)/proprietary/lib/libwvdrm_L3.so:system/lib/libwvdrm_L3.so \
-    $(LOCAL_PATH)/proprietary/lib/libwvm.so:system/lib/libwvm.so \
-    $(LOCAL_PATH)/proprietary/lib/libWVStreamControlAPI_L3.so:system/lib/libWVStreamControlAPI_L3.so \
-    $(LOCAL_PATH)/proprietary/lib/ppp_sterc.so:system/lib/ppp_sterc.so \
+
+# OMX
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/libnmftimer.so:system/lib/libnmftimer.so \
+    $(LOCAL_PATH)/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
     $(LOCAL_PATH)/proprietary/lib/ste_omxcomponents/libspeech_processing.so:system/lib/ste_omxcomponents/libspeech_processing.so \
     $(LOCAL_PATH)/proprietary/lib/ste_omxcomponents/libste_alsasink.so:system/lib/ste_omxcomponents/libste_alsasink.so \
     $(LOCAL_PATH)/proprietary/lib/ste_omxcomponents/libste_alsasource.so:system/lib/ste_omxcomponents/libste_alsasource.so \
@@ -282,46 +207,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/ste_omxcomponents/libst_omxredeye_corrector.so:system/lib/ste_omxcomponents/libst_omxredeye_corrector.so \
     $(LOCAL_PATH)/proprietary/lib/ste_omxcomponents/libst_omxredeye_detector.so:system/lib/ste_omxcomponents/libst_omxredeye_detector.so \
     $(LOCAL_PATH)/proprietary/lib/ste_omxcomponents/libst_omxsplitter.so:system/lib/ste_omxcomponents/libst_omxsplitter.so \
-    $(LOCAL_PATH)/proprietary/lib/tee/cops_ta.ssw:system/lib/tee/cops_ta.ssw \
-    $(LOCAL_PATH)/proprietary/lib/tee/custom_ta.ssw:system/lib/tee/custom_ta.ssw \
-    $(LOCAL_PATH)/proprietary/lib/tee/libbassapp_ssw:system/lib/tee/libbassapp_ssw \
-    $(LOCAL_PATH)/proprietary/lib/tee/smcl_ta_8500bx_secure.ssw:system/lib/tee/smcl_ta_8500bx_secure.ssw \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/default.conf:system/usr/share/alsa/pcm/default.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/front.conf:system/usr/share/alsa/pcm/front.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/modem.conf:system/usr/share/alsa/pcm/modem.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/rear.conf:system/usr/share/alsa/pcm/rear.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/side.conf:system/usr/share/alsa/pcm/side.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/aptina_mt9v113.dat:system/usr/share/camera/config_file/aptina_mt9v113.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/dongbu_db8131m.dat:system/usr/share/camera/config_file/dongbu_db8131m.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/omnivision_ov5640_pri_30fps.dat:system/usr/share/camera/config_file/omnivision_ov5640_pri_30fps.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/omnivision_ov5640_pri.dat:system/usr/share/camera/config_file/omnivision_ov5640_pri.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/omnivision_ov5640_sec.dat:system/usr/share/camera/config_file/omnivision_ov5640_sec.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_golden.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_golden.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_janice.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_janice.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_kyle.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_kyle.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_rev00.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_rev00.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_ricco.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_ricco.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k6aafx13.dat:system/usr/share/camera/config_file/samsung_s5k6aafx13.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k6aafx13_rev00.dat:system/usr/share/camera/config_file/samsung_s5k6aafx13_rev00.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_hendrix.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_hendrix.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_kyle.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_kyle.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrcommon.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrcommon.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec24.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec24.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec.elf4nmf \
@@ -607,4 +492,131 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/volctrl/effect/libvolctrl.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/volctrl/effect/libvolctrl.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/volctrl/nmfil/effect.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/volctrl/nmfil/effect.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/vpp.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/vpp.elf4nmf \
+
+# Alsa config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/default.conf:system/usr/share/alsa/pcm/default.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/front.conf:system/usr/share/alsa/pcm/front.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/modem.conf:system/usr/share/alsa/pcm/modem.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/rear.conf:system/usr/share/alsa/pcm/rear.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/side.conf:system/usr/share/alsa/pcm/side.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf \
+
+# LVVEFS config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/LVVEFS_Rx_Configuration.txt:system/etc/LVVEFS_tuning_parameters/LVVEFS_Rx_Configuration.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/LVVEFS_Tx_Configuration.txt:system/etc/LVVEFS_tuning_parameters/LVVEFS_Tx_Configuration.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADPHONE_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HEADSET_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_LOOPBACK.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_LOOPBACK.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_VT.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_WB.txt:system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECOFF_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_BTNRECON_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_EXTRA.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_EXTRA.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_EXTRA_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_EXTRA_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HANDSET_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADPHONE_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_HEADSET_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_LOOPBACK.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_LOOPBACK.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_EXTRA.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_EXTRA.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_EXTRA_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_EXTRA_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt \
+
+# Prebuilt libraries that are needed to build open-source libraries
+PRODUCT_COPY_FILES := \
+    $(LOCAL_PATH)/proprietary/lib/libril.so:obj/lib/libril.so \
+    $(LOCAL_PATH)/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
+    $(LOCAL_PATH)/proprietary/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
+    $(LOCAL_PATH)/proprietary/etc/AT/system_id.cfg:system/etc/AT/system_id.cfg \
+    $(LOCAL_PATH)/proprietary/etc/psdata/stepscc_conf:system/etc/psdata/stepscc_conf \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_conf:system/etc/psdata/sterc_conf \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_conf_alt:system/etc/psdata/sterc_conf_alt \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect:system/etc/psdata/sterc_script_connect \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect_alt:system/etc/psdata/sterc_script_connect_alt \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect_dun:system/etc/psdata/sterc_script_connect_dun \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_disconnect:system/etc/psdata/sterc_script_disconnect \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_disconnect_dun:system/etc/psdata/sterc_script_disconnect_dun \
+    $(LOCAL_PATH)/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
+    $(LOCAL_PATH)/proprietary/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
+    $(LOCAL_PATH)/proprietary/lib/libbt-aptx-4.0.3.so:system/lib/libbt-aptx-4.0.3.so \
+    $(LOCAL_PATH)/proprietary/lib/libSamsungPDLComposer_MD.so:system/lib/libSamsungPDLComposer_MD.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_adm.so:system/lib/libste_adm.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ensloader.so:system/lib/libste_ensloader.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
+    $(LOCAL_PATH)/proprietary/lib/libexpat.so:system/lib/libexpat.so \
+    $(LOCAL_PATH)/proprietary/lib/libFFTEm.so:system/lib/libFFTEm.so \
+    $(LOCAL_PATH)/proprietary/lib/libomxil-bellagio.so:system/lib/libomxil-bellagio.so \
+    $(LOCAL_PATH)/proprietary/lib/libpower.so:system/lib/libpower.so \
+    $(LOCAL_PATH)/proprietary/lib/libsavsac.so:system/lib/libsavsac.so \
+    $(LOCAL_PATH)/proprietary/lib/libsavscmn.so:system/lib/libsavscmn.so \
+    $(LOCAL_PATH)/proprietary/lib/libstlport.so:system/lib/libstlport.so \
+    $(LOCAL_PATH)/proprietary/lib/libwvdrm_L3.so:system/lib/libwvdrm_L3.so \
+    $(LOCAL_PATH)/proprietary/lib/libwvm.so:system/lib/libwvm.so \
+    $(LOCAL_PATH)/proprietary/lib/libWVStreamControlAPI_L3.so:system/lib/libWVStreamControlAPI_L3.so \
+    $(LOCAL_PATH)/proprietary/lib/ppp_sterc.so:system/lib/ppp_sterc.so \
     $(LOCAL_PATH)/proprietary/xbin/battery_params:system/xbin/battery_params
