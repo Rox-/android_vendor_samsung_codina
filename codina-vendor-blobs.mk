@@ -58,7 +58,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/lib_Samsung_SB_AM_for_ICS_v03008.so:system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so \
     $(LOCAL_PATH)/proprietary/lib/libhalaudioprocessing.so:system/lib/libhalaudioprocessing.so \
     $(LOCAL_PATH)/proprietary/lib/libsamsungRecord.so:system/lib/libsamsungRecord.so \
-    $(LOCAL_PATH)/proprietary/lib/libasound.so:system/lib/libasound.so \
     $(LOCAL_PATH)/proprietary/lib/libsamsungtts.so:system/lib/libsamsungtts.so \
     $(LOCAL_PATH)/proprietary/lib/libSR_AudioIn.so:system/lib/libSR_AudioIn.so \
 
@@ -134,7 +133,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libatparser.so:system/lib/libatparser.so \
     $(LOCAL_PATH)/proprietary/lib/libbassapp.so:system/lib/libbassapp.so \
-    $(LOCAL_PATH)/proprietary/lib/libblt_hw.so:system/lib/libblt_hw.so \
     $(LOCAL_PATH)/proprietary/lib/libcn.so:system/lib/libcn.so \
     $(LOCAL_PATH)/proprietary/lib/libcontrolcsc.so:system/lib/libcontrolcsc.so \
     $(LOCAL_PATH)/proprietary/lib/libcspsa.so:system/lib/libcspsa.so \
@@ -610,7 +608,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
     $(LOCAL_PATH)/proprietary/lib/libexpat.so:system/lib/libexpat.so \
     $(LOCAL_PATH)/proprietary/lib/libFFTEm.so:system/lib/libFFTEm.so \
-    $(LOCAL_PATH)/proprietary/lib/libomxil-bellagio.so:system/lib/libomxil-bellagio.so \
     $(LOCAL_PATH)/proprietary/lib/libpower.so:system/lib/libpower.so \
     $(LOCAL_PATH)/proprietary/lib/libsavsac.so:system/lib/libsavsac.so \
     $(LOCAL_PATH)/proprietary/lib/libsavscmn.so:system/lib/libsavscmn.so \
