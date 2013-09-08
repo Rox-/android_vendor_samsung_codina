@@ -21,24 +21,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
     $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/aptina_mt9v113.dat:system/usr/share/camera/config_file/aptina_mt9v113.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/dongbu_db8131m.dat:system/usr/share/camera/config_file/dongbu_db8131m.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/omnivision_ov5640_pri_30fps.dat:system/usr/share/camera/config_file/omnivision_ov5640_pri_30fps.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/omnivision_ov5640_pri.dat:system/usr/share/camera/config_file/omnivision_ov5640_pri.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/omnivision_ov5640_sec.dat:system/usr/share/camera/config_file/omnivision_ov5640_sec.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_golden.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_golden.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_janice.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_janice.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_kyle.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_kyle.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_rev00.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_rev00.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_ricco.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_ricco.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k6aafx13.dat:system/usr/share/camera/config_file/samsung_s5k6aafx13.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k6aafx13_rev00.dat:system/usr/share/camera/config_file/samsung_s5k6aafx13_rev00.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_hendrix.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_hendrix.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_kyle.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_kyle.dat \
-    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat:system/usr/sahre/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat \
+    $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat
 
 # Mali-400
 PRODUCT_COPY_FILES += \
@@ -46,7 +30,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     $(LOCAL_PATH)/proprietary/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
     $(LOCAL_PATH)/proprietary/lib/libMali.so:system/lib/libMali.so \
-    $(LOCAL_PATH)/proprietary/lib/libUMP.so:system/lib/libUMP.so \
+    $(LOCAL_PATH)/proprietary/lib/libUMP.so:system/lib/libUMP.so
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -59,17 +43,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libhalaudioprocessing.so:system/lib/libhalaudioprocessing.so \
     $(LOCAL_PATH)/proprietary/lib/libsamsungRecord.so:system/lib/libsamsungRecord.so \
     $(LOCAL_PATH)/proprietary/lib/libsamsungtts.so:system/lib/libsamsungtts.so \
-    $(LOCAL_PATH)/proprietary/lib/libSR_AudioIn.so:system/lib/libSR_AudioIn.so \
+    $(LOCAL_PATH)/proprietary/lib/libSR_AudioIn.so:system/lib/libSR_AudioIn.so
 
 # RIL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libril.so:system/lib/libril.so \
     $(LOCAL_PATH)/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \
-    $(LOCAL_PATH)/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
+    $(LOCAL_PATH)/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/bin/bcm4330.hcd:system/bin/bcm4330.hcd \
+    $(LOCAL_PATH)/proprietary/bin/bcm4330.hcd:system/bin/bcm4330.hcd
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -78,13 +62,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_p2p.bin:system/etc/wifi/bcmdhd_p2p.bin \
     $(LOCAL_PATH)/proprietary/etc/wifi/bcmdhd_sta.bin:system/etc/wifi/bcmdhd_sta.bin \
     $(LOCAL_PATH)/proprietary/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
-    $(LOCAL_PATH)/proprietary/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
+    $(LOCAL_PATH)/proprietary/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt
 
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/gralloc.montblanc.so:system/lib/hw/gralloc.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/hw/hwcomposer.montblanc.so:system/lib/hw/hwcomposer.montblanc.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/copybit.montblanc.so:system/lib/hw/copybit.montblanc.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/copybit.montblanc.so:system/lib/hw/copybit.montblanc.so
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -93,14 +77,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/etc/AGPS_CA.pem:system/etc/AGPS_CA.pem \
     $(LOCAL_PATH)/proprietary/etc/gps.xml:system/etc/gps.xml \
     $(LOCAL_PATH)/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
-    $(LOCAL_PATH)/proprietary/lib/hw/gps.montblanc.so:system/lib/hw/gps.montblanc.so \
+    $(LOCAL_PATH)/proprietary/lib/hw/gps.montblanc.so:system/lib/hw/gps.montblanc.so
 
 # Lights/sensors modules
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
     $(LOCAL_PATH)/proprietary/etc/sensors.dat:system/etc/sensors.dat \
     $(LOCAL_PATH)/proprietary/etc/calib.dat:system/etc/calib.dat \
-    $(LOCAL_PATH)/proprietary/etc/param.dat:system/etc/param.dat \
+    $(LOCAL_PATH)/proprietary/etc/param.dat:system/etc/param.dat
 
 # Security Daemon Modem
 PRODUCT_COPY_FILES += \
@@ -108,7 +92,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/tee/custom_ta.ssw:system/lib/tee/custom_ta.ssw \
     $(LOCAL_PATH)/proprietary/lib/tee/libbassapp_ssw:system/lib/tee/libbassapp_ssw \
     $(LOCAL_PATH)/proprietary/lib/tee/smcl_ta_8500bx_secure.ssw:system/lib/tee/smcl_ta_8500bx_secure.ssw \
-    $(LOCAL_PATH)/proprietary/lib/libcops.so:system/lib/libcops.so \
+    $(LOCAL_PATH)/proprietary/lib/libcops.so:system/lib/libcops.so
 
 # System STE binaries
 PRODUCT_COPY_FILES += \
@@ -127,7 +111,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/orientationd6x:system/bin/orientationd6x \
     $(LOCAL_PATH)/proprietary/bin/rild:system/bin/rild \
     $(LOCAL_PATH)/proprietary/bin/stedump:system/bin/stedump \
-    $(LOCAL_PATH)/proprietary/bin/ta_loader:system/bin/ta_loader \
+    $(LOCAL_PATH)/proprietary/bin/ta_loader:system/bin/ta_loader
 
 # System STE Libs
 PRODUCT_COPY_FILES += \
@@ -155,9 +139,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libspeech_proc_customer_plugin.so:system/lib/libspeech_proc_customer_plugin.so \
     $(LOCAL_PATH)/proprietary/lib/libstecom.so:system/lib/libstecom.so \
     $(LOCAL_PATH)/proprietary/lib/libstelpcutils.so:system/lib/libstelpcutils.so \
-   $(LOCAL_PATH)/proprietary/lib/libsterc.so:system/lib/libsterc.so \
+    $(LOCAL_PATH)/proprietary/lib/libsterc.so:system/lib/libsterc.so \
     $(LOCAL_PATH)/proprietary/lib/libtee.so:system/lib/libtee.so \
     $(LOCAL_PATH)/proprietary/lib/libtrace.so:system/lib/libtrace.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_adm.so:system/lib/libste_adm.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ensloader.so:system/lib/libste_ensloader.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
 
 # OMX
 PRODUCT_COPY_FILES += \
@@ -489,7 +484,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/vc1dec/mpc/vc1dec.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/vc1dec/mpc/vc1dec.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/volctrl/effect/libvolctrl.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/volctrl/effect/libvolctrl.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/volctrl/nmfil/effect.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/volctrl/nmfil/effect.elf4nmf \
-    $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/vpp.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/vpp.elf4nmf \
+    $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/vpp.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/vpp.elf4nmf
 
 # Alsa config
 PRODUCT_COPY_FILES += \
@@ -509,7 +504,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
     $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
     $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
-    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf \
+    $(LOCAL_PATH)/proprietary/usr/share/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf
 
 # LVVEFS config
 PRODUCT_COPY_FILES += \
@@ -572,7 +567,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER.txt \
     $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt \
     $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt \
-    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt \
+    $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
@@ -595,17 +590,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
     $(LOCAL_PATH)/proprietary/lib/libbt-aptx-4.0.3.so:system/lib/libbt-aptx-4.0.3.so \
     $(LOCAL_PATH)/proprietary/lib/libSamsungPDLComposer_MD.so:system/lib/libSamsungPDLComposer_MD.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_adm.so:system/lib/libste_adm.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ensloader.so:system/lib/libste_ensloader.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
     $(LOCAL_PATH)/proprietary/lib/libexpat.so:system/lib/libexpat.so \
     $(LOCAL_PATH)/proprietary/lib/libFFTEm.so:system/lib/libFFTEm.so \
     $(LOCAL_PATH)/proprietary/lib/libpower.so:system/lib/libpower.so \
