@@ -20,6 +20,7 @@ LOCAL_PATH := $(LOCAL_PATH)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
+    $(LOCAL_PATH)/proprietary/lib/libFFTEm.so:system/lib/libFFTEm.so \
     $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/aptina_mt9v113.dat:system/usr/share/camera/config_file/aptina_mt9v113.dat \
     $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat:system/usr/sahre/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat \
     $(LOCAL_PATH)/proprietary/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_codina_tmo.dat
@@ -79,6 +80,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
     $(LOCAL_PATH)/proprietary/lib/hw/gps.montblanc.so:system/lib/hw/gps.montblanc.so
 
+# DRM
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
+    $(LOCAL_PATH)/proprietary/lib/libwvdrm_L3.so:system/lib/libwvdrm_L3.so \
+    $(LOCAL_PATH)/proprietary/lib/libwvm.so:system/lib/libwvm.so \
+    $(LOCAL_PATH)/proprietary/lib/libWVStreamControlAPI_L3.so:system/lib/libWVStreamControlAPI_L3.so
+
 # Lights/sensors modules
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
@@ -111,7 +119,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/bin/orientationd6x:system/bin/orientationd6x \
     $(LOCAL_PATH)/proprietary/bin/rild:system/bin/rild \
     $(LOCAL_PATH)/proprietary/bin/stedump:system/bin/stedump \
-    $(LOCAL_PATH)/proprietary/bin/ta_loader:system/bin/ta_loader
+    $(LOCAL_PATH)/proprietary/bin/ta_loader:system/bin/ta_loader\
+    $(LOCAL_PATH)/proprietary/xbin/battery_params:system/xbin/battery_params
 
 # System STE Libs
 PRODUCT_COPY_FILES += \
@@ -133,6 +142,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
     $(LOCAL_PATH)/proprietary/lib/libphonet.so:system/lib/libphonet.so \
     $(LOCAL_PATH)/proprietary/lib/libpscc.so:system/lib/libpscc.so \
+    $(LOCAL_PATH)/proprietary/lib/libexpat.so:system/lib/libexpat.so \
+    $(LOCAL_PATH)/proprietary/lib/libpower.so:system/lib/libpower.so \
     $(LOCAL_PATH)/proprietary/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     $(LOCAL_PATH)/proprietary/lib/libshmnetlnk.so:system/lib/libshmnetlnk.so \
     $(LOCAL_PATH)/proprietary/lib/libsms_server.so:system/lib/libsms_server.so \
@@ -142,6 +153,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libsterc.so:system/lib/libsterc.so \
     $(LOCAL_PATH)/proprietary/lib/libtee.so:system/lib/libtee.so \
     $(LOCAL_PATH)/proprietary/lib/libtrace.so:system/lib/libtrace.so \
+    $(LOCAL_PATH)/proprietary/lib/libstlport.so:system/lib/libstlport.so \
     $(LOCAL_PATH)/proprietary/lib/libste_adm.so:system/lib/libste_adm.so \
     $(LOCAL_PATH)/proprietary/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so \
     $(LOCAL_PATH)/proprietary/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
@@ -152,12 +164,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libste_ensloader.so:system/lib/libste_ensloader.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
+    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so
 
 # OMX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libnmftimer.so:system/lib/libnmftimer.so \
     $(LOCAL_PATH)/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
+    $(LOCAL_PATH)/proprietary/lib/ppp_sterc.so:system/lib/ppp_sterc.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
@@ -200,6 +213,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/ste_omxcomponents/libst_omxredeye_corrector.so:system/lib/ste_omxcomponents/libst_omxredeye_corrector.so \
     $(LOCAL_PATH)/proprietary/lib/ste_omxcomponents/libst_omxredeye_detector.so:system/lib/ste_omxcomponents/libst_omxredeye_detector.so \
     $(LOCAL_PATH)/proprietary/lib/ste_omxcomponents/libst_omxsplitter.so:system/lib/ste_omxcomponents/libst_omxsplitter.so \
+
+# STE Psdata
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/etc/psdata/stepscc_conf:system/etc/psdata/stepscc_conf \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_conf:system/etc/psdata/sterc_conf \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_conf_alt:system/etc/psdata/sterc_conf_alt \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect:system/etc/psdata/sterc_script_connect \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect_alt:system/etc/psdata/sterc_script_connect_alt \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect_dun:system/etc/psdata/sterc_script_connect_dun \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_disconnect:system/etc/psdata/sterc_script_disconnect \
+    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_disconnect_dun:system/etc/psdata/sterc_script_disconnect_dun
+
+# NMF Confs
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrcommon.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrcommon.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec24.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec24.elf4nmf \
     $(LOCAL_PATH)/proprietary/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec.elf4nmf:system/usr/share/nmf/repository/mmdsp_8500_v2/amr/codec/libamrdec.elf4nmf \
@@ -578,26 +605,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
     $(LOCAL_PATH)/proprietary/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
     $(LOCAL_PATH)/proprietary/etc/AT/system_id.cfg:system/etc/AT/system_id.cfg \
-    $(LOCAL_PATH)/proprietary/etc/psdata/stepscc_conf:system/etc/psdata/stepscc_conf \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_conf:system/etc/psdata/sterc_conf \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_conf_alt:system/etc/psdata/sterc_conf_alt \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect:system/etc/psdata/sterc_script_connect \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect_alt:system/etc/psdata/sterc_script_connect_alt \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_connect_dun:system/etc/psdata/sterc_script_connect_dun \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_disconnect:system/etc/psdata/sterc_script_disconnect \
-    $(LOCAL_PATH)/proprietary/etc/psdata/sterc_script_disconnect_dun:system/etc/psdata/sterc_script_disconnect_dun \
-    $(LOCAL_PATH)/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
     $(LOCAL_PATH)/proprietary/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
     $(LOCAL_PATH)/proprietary/lib/libbt-aptx-4.0.3.so:system/lib/libbt-aptx-4.0.3.so \
     $(LOCAL_PATH)/proprietary/lib/libSamsungPDLComposer_MD.so:system/lib/libSamsungPDLComposer_MD.so \
-    $(LOCAL_PATH)/proprietary/lib/libexpat.so:system/lib/libexpat.so \
-    $(LOCAL_PATH)/proprietary/lib/libFFTEm.so:system/lib/libFFTEm.so \
-    $(LOCAL_PATH)/proprietary/lib/libpower.so:system/lib/libpower.so \
     $(LOCAL_PATH)/proprietary/lib/libsavsac.so:system/lib/libsavsac.so \
     $(LOCAL_PATH)/proprietary/lib/libsavscmn.so:system/lib/libsavscmn.so \
-    $(LOCAL_PATH)/proprietary/lib/libstlport.so:system/lib/libstlport.so \
-    $(LOCAL_PATH)/proprietary/lib/libwvdrm_L3.so:system/lib/libwvdrm_L3.so \
-    $(LOCAL_PATH)/proprietary/lib/libwvm.so:system/lib/libwvm.so \
-    $(LOCAL_PATH)/proprietary/lib/libWVStreamControlAPI_L3.so:system/lib/libWVStreamControlAPI_L3.so \
-    $(LOCAL_PATH)/proprietary/lib/ppp_sterc.so:system/lib/ppp_sterc.so \
-    $(LOCAL_PATH)/proprietary/xbin/battery_params:system/xbin/battery_params
