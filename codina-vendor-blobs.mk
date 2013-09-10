@@ -17,7 +17,7 @@
 LOCAL_PATH := $(LOCAL_PATH)
 
 # Camera
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/proprietary/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
     $(LOCAL_PATH)/proprietary/lib/libFFTEm.so:system/lib/libFFTEm.so \
@@ -50,7 +50,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libril.so:system/lib/libril.so \
     $(LOCAL_PATH)/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \
-    $(LOCAL_PATH)/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so
+    $(LOCAL_PATH)/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
+    $(LOCAL_PATH)/proprietary/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
+    $(LOCAL_PATH)/proprietary/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
+    $(LOCAL_PATH)/proprietary/etc/AT/system_id.cfg:system/etc/AT/system_id.cfg
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
@@ -160,11 +163,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
     $(LOCAL_PATH)/proprietary/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ensloader.so:system/lib/libste_ensloader.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
-    $(LOCAL_PATH)/proprietary/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so
+    $(LOCAL_PATH)/proprietary/lib/libste_ensloader.so:system/lib/libste_ensloader.so 
 
 # OMX
 PRODUCT_COPY_FILES += \
@@ -595,18 +594,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt \
     $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt \
     $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt
-
-# Prebuilt libraries that are needed to build open-source libraries
-PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/proprietary/lib/libril.so:obj/lib/libril.so \
-    $(LOCAL_PATH)/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
-    $(LOCAL_PATH)/proprietary/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
-    $(LOCAL_PATH)/proprietary/etc/AT/system_id.cfg:system/etc/AT/system_id.cfg \
-    $(LOCAL_PATH)/proprietary/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
-    $(LOCAL_PATH)/proprietary/lib/libbt-aptx-4.0.3.so:system/lib/libbt-aptx-4.0.3.so \
-    $(LOCAL_PATH)/proprietary/lib/libSamsungPDLComposer_MD.so:system/lib/libSamsungPDLComposer_MD.so \
-    $(LOCAL_PATH)/proprietary/lib/libsavsac.so:system/lib/libsavsac.so \
-    $(LOCAL_PATH)/proprietary/lib/libsavscmn.so:system/lib/libsavscmn.so \
