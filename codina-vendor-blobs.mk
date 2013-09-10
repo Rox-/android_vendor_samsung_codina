@@ -17,7 +17,7 @@
 LOCAL_PATH := $(LOCAL_PATH)
 
 # Camera
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/proprietary/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
     $(LOCAL_PATH)/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
     $(LOCAL_PATH)/proprietary/lib/libFFTEm.so:system/lib/libFFTEm.so \
@@ -597,7 +597,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt
 
 # Prebuilt libraries that are needed to build open-source libraries
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libril.so:obj/lib/libril.so \
     $(LOCAL_PATH)/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so
 
