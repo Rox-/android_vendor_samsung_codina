@@ -96,6 +96,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
     $(LOCAL_PATH)/proprietary/etc/sensors.dat:system/etc/sensors.dat \
     $(LOCAL_PATH)/proprietary/etc/calib.dat:system/etc/calib.dat \
+    $(LOCAL_PATH)/proprietary/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
     $(LOCAL_PATH)/proprietary/etc/param.dat:system/etc/param.dat
 
 # Security Daemon Modem
